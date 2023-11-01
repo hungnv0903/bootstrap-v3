@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,57 @@
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
+
 <body>
     <!-- header -->
-    <header>
+    <header id="header">
+        <!-- navbar -->
         <div class="row">
-            <div class=" col-12 dropdown">
-                <button class="btn btn-secondary float-end m-3" type="button">
-                    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-                </button>
+            <div class="col-12">
+                <nav class="navbar navbar-dark fixed-top " aria-label="Dark offcanvas navbar">
+                    <div class="col-12">
+                        <button class="btn btn-secondary float-end my-3 me-4" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark"
+                            aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas offcanvas-end bg-primary text-light " tabindex="-1" id="offcanvasNavbarDark"
+                        aria-labelledby="offcanvasNavbarDarkLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-capitalize" id="offcanvasNavbarDarkLabel">start bootstrap5
+                            </h5>
+                            <button type="button" class="navbar-toggler bg-secondary my-3 me-4" data-bs-dismiss="offcanvas"
+                                aria-label="Close">
+                                <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+                            </button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#header">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#portfolio">Portfolio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </div>
-        <div class="row my-5">
-            <div class="col-6 mx-auto text-center my-5">
-                <h1 class="h1 fs-1 text-capitalize fw-bold">stylish portfolio</h1>
+        <div class="stylish row ">
+            <div class="col-12 mx-auto text-center my-5">
+                <h1 class="h1-stylish text-capitalize fw-bold ">stylish portfolio</h1>
                 <h5 class="h5 text-capitalize fst-italic">a free bootstrap theme by start bootstrap</h5>
                 <button class="btn btn-primary text-capitalize my-4" type="button">find out more</button>
             </div>
@@ -28,10 +67,11 @@
     </header>
 
     <!-- what we offer -->
-    <div class="row p-5">
+    <div class="row p-5" id="about">
         <div class="col-10 mx-auto text-center ">
             <h5 class="h5 fs-3 fw-bold">Stylish portfolio is the perfect theme for your next project!</h5>
-            <p class="text-secondary ">This theme features a flexible, UX friendly sidebar menu and stock photos from our 
+            <p class="text-secondary ">This theme features a flexible, UX friendly sidebar menu and stock photos from
+                our
                 friends at <a href="#" class="text-decoration-none">Unsplash </a>!
             </p>
             <button class="btn btn-dark text-capitalize my-4" type="button">what we offer</button>
@@ -39,7 +79,7 @@
     </div>
 
     <!-- service icon -->
-    <div class="row p-5 bg-primary">
+    <div class="row p-5 bg-primary" id="services">
         <div class="col-12 text-center text-light mx-auto">
             <a href="#" class="text-uppercase text-warning text-decoration-none fw-bold">services</a>
             <h2 class="h2 fs-1 text-capitalize fw-bold">what we offer</h2>
@@ -63,8 +103,9 @@
                         <i class="fa-regular fa-thumbs-up fa-2x p-5" style="color: #005eff;"></i>
                     </div>
                     <h5 class="h5 my-2">Favorited</h5>
-                    <p class="text-light">Millions of users 
-                        <i class="fa-solid fa-heart" style="color: #ffffff;"></i> Start Bootstrap!</p>
+                    <p class="text-light">Millions of users
+                        <i class="fa-solid fa-heart" style="color: #ffffff;"></i> Start Bootstrap!
+                    </p>
                 </div>
                 <div class="col-10 col-lg-3 col-md-5 mx-auto text-center mb-5">
                     <div class="mx-auto bg-light border rounded-circle" style="width: 135px;">
@@ -88,7 +129,7 @@
     </div>
 
     <!--portfolio  -->
-    <div class="row p-5 px-2">
+    <div class="row p-5 px-2" id="portfolio">
         <div class="col-12 text-center text-dark mx-auto my-5">
             <a href="#" class="text-uppercase text-warning text-decoration-none fw-bold">portfolio</a>
             <h2 class="h2 fs-1 text-capitalize fw-bold">recent projects</h2>
@@ -137,12 +178,12 @@
     </div>
     <!-- map -->
     <div class="row map">
-        </div>
+    </div>
     </div>
 
     <!-- footer -->
-    <footer>
-        <div class="row p-5">
+    <footer class="row" id="contact">
+        <div class="col-12 p-5">
             <div class="icon col-12 text-center fa-3x mx-auto mx-5 my-3">
                 <i class="fa-brands fa-facebook mx-2" style="color: #005eff;"></i>
                 <i class="fa-brands fa-square-twitter mx-2" style="color: #005eff;"></i>
@@ -150,12 +191,18 @@
             </div>
             <span class="text-center text-capitalize mx-auto d-block">
                 Copyright
-                <i class="fa-regular fa-copyright"></i> 
+                <i class="fa-regular fa-copyright"></i>
                 your website 2023.
             </span>
         </div>
+        <a href="#header">
+            <button class="btn btn-secondary float-end m-3" type="button">
+                <i class="fa-solid fa-chevron-up" style="color: #ffffff;"></i>
+            </button>
+        </a>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

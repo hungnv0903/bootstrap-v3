@@ -29,3 +29,13 @@ header , .download{
     font-size: 50px;
     width: 100%;
 }
+
+@media screen and (max-width:424px) {
+    .text-portfolio {
+        width: 80%;
+        left: 10px !important;
+        margin-left: 0px !important;
+        top: 40% !important;
+        font-size: 13px; 
+    }
+}
